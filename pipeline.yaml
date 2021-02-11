@@ -1,0 +1,11 @@
+# Azure DevOps Build Pipeline
+
+steps:
+  - task: Maven@3
+    displayName: Build CloudStorageWagon
+    inputs:
+      mavenPomFile: 'pom.xml'
+      goals: 'package'
+      options: -B
+      publishJUnitResults: false
+      jdkVersionOption: '1.8'
