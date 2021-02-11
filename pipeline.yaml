@@ -1,4 +1,9 @@
 # Azure DevOps Build Pipeline
+name: CloudStorageMaven_$(Build.BuildID)_$(SourceBranchName)_$(Date:yyyyMMdd)
+
+trigger:
+  - master
+  - feature/*
 
 steps:
   - task: Maven@3
