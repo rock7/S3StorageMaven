@@ -14,3 +14,9 @@ steps:
       options: -B
       publishJUnitResults: false
       jdkVersionOption: '1.8'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: 'AzureStorageWagon/target/azure-storage-wagon.jar'
+      artifactName: 'azure-storage-wagon'
+      publishLocation: 'Container'
